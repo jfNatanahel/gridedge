@@ -1,0 +1,49 @@
+:root {
+  /* Fondos */
+  --bg-primary:   #0A0E1A;
+  --bg-secondary: #111827;
+  --bg-sidebar:   #0F172A;
+  --bg-card:      #1E293B;
+
+  /* Bordes */
+  --border:       #1E293B;
+  --border-light: #334155;
+
+  /* Texto */
+  --text-primary:   #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted:     #475569;
+
+  /* Acento */
+  --accent:       #3B82F6;
+  --accent-glow:  rgba(59, 130, 246, 0.15);
+
+  /* Estados */
+  --green:  #22C55E;
+  --yellow: #EAB308;
+  --orange: #F97316;
+  --red:    #EF4444;
+  --gray:   #6B7280;
+
+  /* Tipografía */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Espaciado base */
+  --sidebar-width-left:  280px;
+  --sidebar-width-right: 300px;
+  --topbar-height:       52px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app { width: 100vw; height: 100vh; overflow: hidden; }

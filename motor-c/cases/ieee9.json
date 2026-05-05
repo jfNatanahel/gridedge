@@ -1,0 +1,13 @@
+{
+  "name": "ieee9_sample",
+  "base_mva": 100.0,
+  "buses": [
+    {"id": 1, "name": "Bus1", "type": "SLACK", "V_pu": 1.04, "theta_rad": 0.0, "P_load_pu": 0.0, "Q_load_pu": 0.0, "lat": -24.78, "lon": -65.41},
+    {"id": 2, "name": "Bus2", "type": "PV", "V_pu": 1.025, "theta_rad": 0.0, "P_load_pu": 0.2, "Q_load_pu": 0.1, "lat": -24.8, "lon": -65.4},
+    {"id": 3, "name": "Bus3", "type": "PQ", "V_pu": 1.0, "theta_rad": 0.0, "P_load_pu": 0.5, "Q_load_pu": 0.2, "lat": -24.79, "lon": -65.39}
+  ],
+  "lines": [
+    {"id": 1, "from_bus": 1, "to_bus": 2, "R_pu": 0.02, "X_pu": 0.06, "B_pu": 0.03},
+    {"id": 2, "from_bus": 2, "to_bus": 3, "R_pu": 0.025, "X_pu": 0.08, "B_pu": 0.025}
+  ]
+}

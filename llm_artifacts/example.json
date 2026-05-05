@@ -1,0 +1,13 @@
+{
+  "task_id": "EXAMPLE-001",
+  "model": "gpt-example",
+  "prompt": "Implementa ejemplo",
+  "files": [
+    {
+      "path": "motor-c/src/example.c",
+      "patch": "---\n+++\n@@\n-void foo() {}\n+void foo() { /* ejemplo */ }\n"
+    }
+  ],
+  "tests": ["make test"],
+  "validation": {"schema": "code_patch", "valid": true}
+}

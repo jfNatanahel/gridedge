@@ -1,0 +1,8 @@
+# CODEOWNERS
+# Update the GitHub usernames below with your org/team handles.
+
+/frontend/ @frontend-team
+/backend/ @backend-team
+/motor-c/ @c-team
+/docs/ @docs-team
+/* @repo-owner

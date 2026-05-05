@@ -1,0 +1,8 @@
+* text=auto
+*.sh eol=lf
+*.py text eol=lf
+*.c *.h text eol=lf
+*.md text eol=lf
+frontend/* text eol=lf
+motor-c/* text eol=lf
+backend/* text eol=lf
