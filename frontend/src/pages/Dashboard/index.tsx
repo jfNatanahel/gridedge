@@ -20,7 +20,26 @@ export default function Dashboard({ networkCase, onBack }: Props) {
     if (!networkCase) return
     store.setIsLoading(true)
     try {
-      const res = await postSolve(networkCase)
+      let res
+      if ((import.meta.env.VITE_USE_MOCK ?? 'false') === 'true') {
+        // mock result from sample case
+        // eslint-disable-next-line @typescript-eslint/no-var-requires
+        const { sampleCase } = require('../../mockData')
+        res = {
+          rc: -1,
+          converged: false,
+          iterations: 0,
+          max_error_pu: 0.0,
+          solve_time_us: 0,
+          n_buses: sampleCase.buses.length,
+          V_pu: sampleCase.buses.map((b: any) => b.voltage_pu ?? b.V_pu ?? 1.0),
+          theta_rad: sampleCase.buses.map((b: any) => (b.angle_deg != null ? (b.angle_deg * Math.PI) / 180 : b.angle_rad ?? 0)),
+          conv_iters: [],
+          conv_errors: [],
+        }
+      } else {
+        res = await postSolve(networkCase)
+      }
       store.setSolveResult(res)
       store.setSystemStatus(res.converged ? 'stable' : 'warning')
     } catch (e: any) {

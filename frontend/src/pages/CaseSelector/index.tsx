@@ -15,6 +15,14 @@ const CaseSelector: React.FC<{ onCaseLoaded: (nc: NetworkCase) => void }> = ({ o
       .finally(() => setLoading(false))
   }, [])
 
+  // If developer wants to use a local mock (no backend), check env var
+  if ((import.meta.env.VITE_USE_MOCK ?? 'false') === 'true') {
+    // lazy-load sample data to avoid importing in prod bundles
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const { sampleCase } = require('../../mockData')
+    if (cases.length === 0) setCases([{ name: sampleCase.name, description: sampleCase.description }])
+  }
+
   const load = async (name: string) => {
     setLoading(true)
     setError(null)

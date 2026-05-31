@@ -28,6 +28,14 @@ Variables de entorno
 - `VITE_API_URL`: URL base del backend (por ejemplo `http://localhost:8000`).
   Puedes exportarla en la terminal o crear un archivo `.env` en `frontend/`.
 
+- `VITE_USE_MOCK`: si `true`, el frontend usará datos de ejemplo (`mockData`) y
+  no necesitarás que el backend esté corriendo para probar la UI (útil en
+  desarrollo local). Ejemplo:
+
+```bash
+VITE_USE_MOCK=true npm run dev
+```
+
 Commandos útiles
 
 - Desarrollo: `npm run dev`
