@@ -1,0 +1,58 @@
+# ==========================================
+# 1. ARCHIVOS GLOBALES Y DE SISTEMA
+# ==========================================
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.swp
+
+# ==========================================
+# 2. ENTORNO VIRTUAL Y CACHÉ DE PYTHON (Backend)
+# ==========================================
+backend/.venv/
+backend/venv/
+backend/env/
+__pycache__/
+*.py[cod]
+*$py.class
+backend/.pytest_cache/
+backend/.mypy_cache/
+
+# ==========================================
+# 3. COMPILACIÓN DE C / CYTHON (¡CRÍTICO!)
+# ==========================================
+# Ignoramos los archivos intermedios generados por MSVC y Cython
+backend/app/engine/*.c
+backend/app/engine/*.cpp
+*.obj
+*.pyd
+*.so
+*.dll
+*.lib
+*.exp
+backend/build/
+backend/dist/
+
+# ==========================================
+# 4. DEPENDENCIAS Y ARTIFACTS DE NODE (Frontend)
+# ==========================================
+frontend/node_modules/
+frontend/dist/
+frontend/.base_mva/
+frontend/.pnpm-debug.log*
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.next.local
+frontend/.env.production.local
+
+# ==========================================
+# 5. CONFIGURACIONES DE IDEs (Opcional)
+# ==========================================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.vcxproj
