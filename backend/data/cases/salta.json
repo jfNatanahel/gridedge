@@ -1,0 +1,69 @@
+{
+  "name": "salta",
+  "description": "Sistema de Transporte de la Provincia de Salta - Nodo Centro-Este",
+  "base_mva": 100.0,
+  "buses": [
+    {
+      "id": 1,
+      "name": "E.T. Güemes (Generación)",
+      "type": "SLACK",
+      "V_pu": 1.04,
+      "theta_deg": 0.0,
+      "P_gen_MW": 0.0,
+      "Q_gen_MVAR": 0.0,
+      "P_load_MW": 0.0,
+      "Q_load_MVAR": 0.0
+    },
+    {
+      "id": 2,
+      "name": "E.T. Salta Este (Distribución)",
+      "type": "PV",
+      "V_pu": 1.02,
+      "theta_deg": 0.0,
+      "P_gen_MW": 60.0,
+      "Q_gen_MVAR": 0.0,
+      "P_load_MW": 10.0,
+      "Q_load_MVAR": 5.0
+    },
+    {
+      "id": 5,
+      "name": "E.T. Salta Centro (Carga Urbana)",
+      "type": "PQ",
+      "V_pu": 1.0,
+      "theta_deg": 0.0,
+      "P_gen_MW": 0.0,
+      "Q_gen_MVAR": 0.0,
+      "P_load_MW": 110.0,
+      "Q_load_MVAR": 40.0
+    }
+  ],
+  "lines": [
+    {
+      "id": 1,
+      "from_bus": 1,
+      "to_bus": 2,
+      "R_pu": 0.007,
+      "X_pu": 0.045,
+      "B_pu": 0.015,
+      "capacity_MW": 200.0
+    },
+    {
+      "id": 2,
+      "from_bus": 2,
+      "to_bus": 5,
+      "R_pu": 0.015,
+      "X_pu": 0.082,
+      "B_pu": 0.022,
+      "capacity_MW": 150.0
+    },
+    {
+      "id": 3,
+      "from_bus": 5,
+      "to_bus": 1,
+      "R_pu": 0.012,
+      "X_pu": 0.071,
+      "B_pu": 0.018,
+      "capacity_MW": 150.0
+    }
+  ]
+}

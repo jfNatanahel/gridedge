@@ -1,0 +1,27 @@
+{
+  "name": "ieee9",
+  "description": "Sistema Estándar IEEE de 9 Nodos - Caso de Validación Oficial WSCC",
+  "base_mva": 100.0,
+  "buses": [
+    { "id": 1, "name": "Bus 1 (Central Slack)", "type": "SLACK", "V_pu": 1.04, "theta_deg": 0.0, "P_gen_MW": 0.0, "Q_gen_MVAR": 0.0, "P_load_MW": 0.0, "Q_load_MVAR": 0.0 },
+    { "id": 2, "name": "Bus 2 (Generador PV)", "type": "PV", "V_pu": 1.025, "theta_deg": 0.0, "P_gen_MW": 163.0, "Q_gen_MVAR": 0.0, "P_load_MW": 0.0, "Q_load_MVAR": 0.0 },
+    { "id": 3, "name": "Bus 3 (Generador PV)", "type": "PV", "V_pu": 1.025, "theta_deg": 0.0, "P_gen_MW": 85.0, "Q_gen_MVAR": 0.0, "P_load_MW": 0.0, "Q_load_MVAR": 0.0 },
+    { "id": 4, "name": "Bus 4 (PQ Paso)", "type": "PQ", "V_pu": 1.0, "theta_deg": 0.0, "P_gen_MW": 0.0, "Q_gen_MVAR": 0.0, "P_load_MW": 0.0, "Q_load_MVAR": 0.0 },
+    { "id": 5, "name": "Bus 5 (PQ Demanda A)", "type": "PQ", "V_pu": 1.0, "theta_deg": 0.0, "P_gen_MW": 0.0, "Q_gen_MVAR": 0.0, "P_load_MW": 125.0, "Q_load_MVAR": 50.0 },
+    { "id": 6, "name": "Bus 6 (PQ Demanda B)", "type": "PQ", "V_pu": 1.0, "theta_deg": 0.0, "P_gen_MW": 0.0, "Q_gen_MVAR": 0.0, "P_load_MW": 90.0, "Q_load_MVAR": 30.0 },
+    { "id": 7, "name": "Bus 7 (PQ Paso)", "type": "PQ", "V_pu": 1.0, "theta_deg": 0.0, "P_gen_MW": 0.0, "Q_gen_MVAR": 0.0, "P_load_MW": 0.0, "Q_load_MVAR": 0.0 },
+    { "id": 8, "name": "Bus 8 (PQ Demanda C)", "type": "PQ", "V_pu": 1.0, "theta_deg": 0.0, "P_gen_MW": 0.0, "Q_gen_MVAR": 0.0, "P_load_MW": 100.0, "Q_load_MVAR": 35.0 },
+    { "id": 9, "name": "Bus 9 (PQ Paso)", "type": "PQ", "V_pu": 1.0, "theta_deg": 0.0, "P_gen_MW": 0.0, "Q_gen_MVAR": 0.0, "P_load_MW": 0.0, "Q_load_MVAR": 0.0 }
+  ],
+  "lines": [
+    { "id": 1, "from_bus": 4, "to_bus": 5, "R_pu": 0.0100, "X_pu": 0.0680, "B_pu": 0.1760, "capacity_MW": 250.0 },
+    { "id": 2, "from_bus": 4, "to_bus": 6, "R_pu": 0.0170, "X_pu": 0.0920, "B_pu": 0.1580, "capacity_MW": 250.0 },
+    { "id": 3, "from_bus": 5, "to_bus": 7, "R_pu": 0.0320, "X_pu": 0.1610, "B_pu": 0.3060, "capacity_MW": 150.0 },
+    { "id": 4, "from_bus": 6, "to_bus": 9, "R_pu": 0.0390, "X_pu": 0.1738, "B_pu": 0.3580, "capacity_MW": 150.0 },
+    { "id": 5, "from_bus": 7, "to_bus": 8, "R_pu": 0.0085, "X_pu": 0.0576, "B_pu": 0.1490, "capacity_MW": 250.0 },
+    { "id": 6, "from_bus": 8, "to_bus": 9, "R_pu": 0.0119, "X_pu": 0.1008, "B_pu": 0.2090, "capacity_MW": 250.0 },
+    { "id": 7, "from_bus": 1, "to_bus": 4, "R_pu": 0.0000, "X_pu": 0.0576, "B_pu": 0.0000, "capacity_MW": 300.0 },
+    { "id": 8, "from_bus": 2, "to_bus": 7, "R_pu": 0.0000, "X_pu": 0.0625, "B_pu": 0.0000, "capacity_MW": 300.0 },
+    { "id": 9, "from_bus": 3, "to_bus": 9, "R_pu": 0.0000, "X_pu": 0.0586, "B_pu": 0.0000, "capacity_MW": 300.0 }
+  ]
+}
